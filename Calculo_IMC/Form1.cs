@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Using System.Decimal;
+
 namespace Calculo_IMC
 {
     public partial class frmIMC : Form
@@ -17,40 +19,20 @@ namespace Calculo_IMC
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmIMC_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            double n1, n2, soma = 0;
+            
+             
+          double n1,n2, soma = 0;
+
+           
 
             n1 = Convert.ToDouble(txtAltura.Text);
             n2 = Convert.ToDouble(txtPeso.Text);
 
-            soma = n1 + n2;
+            soma = n2 / (n1 * n1);
 
             txtResult.Text = soma.ToString();
 
@@ -63,5 +45,22 @@ namespace Calculo_IMC
           
 
         }
+
+       
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtPeso.Clear();
+            txtAltura.Clear();
+            txtResult.Clear();
+        }
+
+      
+
+
+        private void txtAltura_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

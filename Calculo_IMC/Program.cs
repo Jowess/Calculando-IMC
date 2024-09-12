@@ -18,5 +18,8 @@ namespace Calculo_IMC
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmIMC());
         }
+
+       
     }
+
 }
